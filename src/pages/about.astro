@@ -1,13 +1,57 @@
 ---
 import Layout from '../layouts/Layout.astro';
----
-+<a href="/">Home</a>
-+<a href="/about/">About</a>
-+<a href="/blog/">Blog</a>
+const pageTitle = "About Me";
+const identity = {
+    firstName: "Rich",
+    country: 'USA',
+    occupation: 'none',
+    hobbies: ["Hiking", "tinkering", "webdev"],
+};
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs", "Figma", "Framer"];
 
-<Layout title="Astro Rich">
-    <h1>About Me</h1>
-    <p>I am working on the intro tutorial</p>
+const happy = true;
+const finished = false;
+const goal = 3;
+---
+
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{pageTitle}</title>
+    </head>
+<body>
+
+    +<a href="/">Home</a>
+    +<a href="/about/">About</a>
+    +<a href="/blog/">Blog</a>
     
-    <p>Site will update as I work through it</p>
-</Layout>
+    <Layout title="Astro Rich">
+        <h1>{pageTitle}</h1>
+        <p>A few facts about me</p>
+        <ul>
+            <li>
+                My name is {identity.firstName}.
+            </li>
+            <li>
+                I live in {identity.country} and i work as a {identity.occupation}
+            </li>
+            {identity.hobbies.length  >= 2 &&
+            <li>
+                Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
+            </li>
+            }
+        </ul>
+        <p>
+            My skills are:
+        </p>
+        <ul>
+            {skills.map((skill) => <li>{skill}</li>)}
+        </ul>
+        {happy && <p>I am happy to be learning Astro</p>}
+        {finished && <p>I finished this tutorial</p>}
+        {goal === 3 ? <p>My goal is to finish in 3 days</p> : <p>My goal is not 3 days</p>}
+    </Layout>
+</body>
+    </html>

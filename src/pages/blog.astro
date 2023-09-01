@@ -1,8 +1,25 @@
-<body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+---
+import Layout from "../layouts/Layout.astro";
+const pageTitle = "Rich's Astro Blog";
+---
++<a href="/">Home</a>
++<a href="/about/">About</a>
++<a href="/blog/">Blog</a>
 
-    <h1>My Astro Learning Blog</h1>
-    <p>This will update as I learn sheesh</p>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <title>{pageTitle}</title>
+    </head>
+    <Layout title="Astro Rich">
+    
+        <body>
+            <h1>My Astro Learning Blog</h1>
+            <p>This will update as I learn sheesh</p>
+            <ul>
+                <li><a href="/posts/post-1">Rich's first Astro Post</a></li>
+            </ul>
+        </body>
+    </Layout>
+</html>
