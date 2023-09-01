@@ -1,16 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Navigation from '../components/Navigation.astro';
 const pageTitle="Home"
 ---
 
-+<a href="/">Home</a>
-+<a href="/about/">About</a>
-+<a href="/blog/">Blog</a>
-
-
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <title>{pageTitle}</title>
+    </head>
 <Layout title="Astro Rich">
 	<main>
+		<Navigation />
 		<h1>{pageTitle}</h1>
 	</main>
 </Layout>
+<html>
