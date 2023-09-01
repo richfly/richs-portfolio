@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkDownPostLayout.astro
-title: "Astro Blog Post"
+title: "Astro Blog Post 2"
 pubDate: 09.01.2023
 description: "This is the first Astro Blog post by Rich"
 author: "Rich Fly"

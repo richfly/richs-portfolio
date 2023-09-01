@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/global.css'
+
+const allPosts = await Astro.glob('../../pages/posts/*.md');
+const tags = [...new Set(allPosts.map((post)=> post.frontmatter.tags).flat())];
+const pageTitle = "Tags";
+---
+<BaseLayout pageTitle={pageTitle}>
+	<div class="tags">
+        {tags.map((tag) => 
+        <p class="tag"><a href={`${tag}`}>{tag}</a></p>)}
+    </div>
+</BaseLayout>

@@ -79,3 +79,30 @@ code {
     display: none;
   }
 }
+
+/* Tag styling */
+a {
+  color: #00539f;
+  text-decoration: none;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  margin: 0.25rem;
+  border: 1px #a1a1a1;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  background-color: #f8fcfd;
+  text-decoration: none;
+}
+
+.tag:hover {
+  font-size: 0.95em;
+  font-weight: 600;
+  margin: 0.1rem;
+}
