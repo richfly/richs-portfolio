@@ -106,3 +106,13 @@ a {
   font-weight: 600;
   margin: 0.1rem;
 }
+
+/*dark mode*/
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}

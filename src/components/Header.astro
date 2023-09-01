@@ -1,10 +1,14 @@
 ---
 import Navigation from './Navigation.astro'
 import Hamburger from './Hamburger.astro'
+import ThemeIcon from './ThemeIcon.astro'
+import { ViewTransitions } from "astro:transitions";
 ---
 <header>
     <nav>
+        <ViewTransitions />
         <Hamburger />
+        <ThemeIcon  />
         <Navigation />
     </nav>
 </header>

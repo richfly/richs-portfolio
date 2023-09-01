@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro'
+import ViewTransitions from 'astro:transitions'
 const allPosts = await Astro.glob('../pages/posts/*.md');
 const pageTitle = "Rich's Astro Blog";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
             <p>This will update as I learn sheesh</p>
-            <ul>
+            <ul transition:name="blogpost">
                 {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
             </ul>
     </BaseLayout>
