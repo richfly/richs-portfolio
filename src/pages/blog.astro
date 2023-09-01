@@ -1,10 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Navigation from '../components/Navigation.astro'
 const pageTitle = "Rich's Astro Blog";
 ---
-+<a href="/">Home</a>
-+<a href="/about/">About</a>
-+<a href="/blog/">Blog</a>
 
 <html lang="en">
     <head>
@@ -13,7 +11,7 @@ const pageTitle = "Rich's Astro Blog";
         <title>{pageTitle}</title>
     </head>
     <Layout title="Astro Rich">
-    
+        <Navigation />    
         <body>
             <h1>My Astro Learning Blog</h1>
             <p>This will update as I learn sheesh</p>
