@@ -10,8 +10,6 @@ image:
 tags: ["astro", "blogging", "learning in public"]
 ---
 
-# My First Astro site
-
 ## What I've accomplished
 
 1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
