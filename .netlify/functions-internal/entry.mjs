@@ -1,6 +1,6 @@
 import * as adapter from '@astrojs/netlify/netlify-functions.js';
 import { renderers } from './renderers.mjs';
-import { manifest } from './manifest.4f71616e.mjs';
+import { manifest } from './manifest.a25b3869.mjs';
 import 'preact';
 import 'preact-render-to-string';
 import 'cookie';
