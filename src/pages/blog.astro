@@ -8,7 +8,7 @@ const pageTitle = "Rich's Astro Blog";
 
 <BaseLayout pageTitle={pageTitle}>
             <p>This will update as I learn sheesh</p>
-            <ul transition:name="blogpost">
-                {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+            <ul >
+                {allPosts.map((post) => <BlogPost transition:name='blog-post' url={post.url} title={post.frontmatter.title} />)}
             </ul>
     </BaseLayout>
